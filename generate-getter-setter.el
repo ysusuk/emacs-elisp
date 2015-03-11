@@ -1,2 +1,5 @@
 (defun generate-getter-setter (member-name)
-  (interactive "sMember-name: "))
+  (interactive "sMember-name: ")
+  (insert (concat "public get" member-name "() {\n"))
+  (insert "}")
+  (indent-region 1 (point-max)))
